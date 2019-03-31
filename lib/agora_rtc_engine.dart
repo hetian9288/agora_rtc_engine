@@ -169,6 +169,9 @@ class AgoraRtcEngine {
   /// Reports the statistics of the RtcEngine once every two seconds.
   static void Function(RtcStats stats) onRtcStats;
 
+  /// 本地用户通话质量监听
+  static void Function(int quality) onLastmileQuality;
+
   /// Reports the last mile network quality of each user in the channel once every two seconds.
   ///
   /// Last mile refers to the connection between the local device and Agora's edge server. This callback reports once every two seconds the uplink last mile network conditions of each user in the channel. If a channel includes multiple users, then this callback will be triggered as many times.
@@ -824,6 +827,11 @@ class AgoraRtcEngine {
             stats.cpuTotalUsage = statsValue['cpuTotalUsage'];
             stats.cpuAppUsage = statsValue['cpuAppUsage'];
             onRtcStats(stats);
+          }
+          break;
+        case 'onLastmileQuality':
+          if (onLastmileQuality != null) {
+            onLastmileQuality(values['quality']);
           }
           break;
         case 'onNetworkQuality':
