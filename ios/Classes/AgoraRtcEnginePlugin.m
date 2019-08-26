@@ -630,7 +630,7 @@
            @"width": @(stats.width),
            @"height": @(stats.height),
            @"receivedBitrate": @(stats.receivedBitrate),
-           @"receivedFrameRate": @(stats.receivedFrameRate),
+           @"receivedFrameRate": @(stats.rendererOutputFrameRate),
            @"rxStreamType": @(stats.rxStreamType),
            };
 }

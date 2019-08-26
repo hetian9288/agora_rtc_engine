@@ -22,11 +22,11 @@ rootProject.allprojects {
 apply plugin: 'com.android.library'
 
 android {
-    compileSdkVersion 27
+    compileSdkVersion 28
 
     defaultConfig {
         minSdkVersion 16
-        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
 
     }
     lintOptions {
@@ -35,5 +35,5 @@ android {
 }
 
 dependencies {
-    implementation 'io.agora.rtc:full-sdk:2.3.3'
+    implementation 'io.agora.rtc:full-sdk:2.4.0'
 }

@@ -193,7 +193,7 @@ public class AgoraRtcEnginePlugin implements MethodCallHandler {
 
         VideoEncoderConfiguration configuration = new VideoEncoderConfiguration();
         configuration.dimensions = new VideoEncoderConfiguration.VideoDimensions(width, height);
-        configuration.frameRate = frameRateFromValue(frameRate);
+        configuration.frameRate = frameRate;
         configuration.bitrate = bitrate;
         configuration.minBitrate = minBitrate;
         configuration.orientationMode = orientationFromValue(orientationMode);
